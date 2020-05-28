@@ -1,4 +1,4 @@
- class BordsController < ApplicationController
+ class BoardsController < ApplicationController
    def index
    end
  end
