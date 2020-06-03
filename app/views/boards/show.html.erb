@@ -15,6 +15,12 @@
   </div>
 </div>
 
-<%= if flash[:notice] %>
+<% if flash[:notice] %>
   <div class="alert alert-primary"><%= flash[:notice] %></div>
 <% end %>
+
+<div class="p-comment__list">
+  <div class="p-comment_listTitle">コメント</div>
+  <%= render @board.comments %>
+</div>
+<%= render partial: 'comments/form', locals: { comment: @comment } %>
